@@ -1,0 +1,12 @@
+<?php
+session_start();
+$kullanici=$_SESSION["ad"];
+if($kullanici=="")
+{
+    header("Location:index1.php?id=giris");
+}
+else{
+   session_destroy();    
+   header("Location:index1.php?id=giris");
+}
+?>
